@@ -1,17 +1,32 @@
 ---
 import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
+import BlogCard from '../components/BlogCard.astro';
 ---
 
 <Layout title="Muhammad Hafid Khoirul">
-	<div class="max-w-screen-md mx-auto px-4">
-		<div class="hero min-h-screen pb-48">
-			<div class="hero-content text-center">
-				<div class="max-w-lg">
-					<h1 class="text-5xl font-bold">Muhammad Hafid K</h1>
-					<p class="py-6 max-w-md">Software engineer based in Bogor, Indonesia. Currently, working as a backend engineer at <a class="link link-primary" href="https://www.qontak.com" target="_blank" rel="norefferer">Qontak</a>.</p>
-					<a href="/about" class="btn btn-primary">More about me</a>
+	<div class="px-4 pb-48">
+		<div class="max-w-screen-md mx-auto">
+			<div class="hero min-h-screen pb-48">
+				<div class="hero-content text-center">
+					<div class="max-w-lg">
+						<h1 class="text-5xl font-bold">Muhammad Hafid K</h1>
+						<p class="py-6 max-w-md">Software engineer based in Bogor, Indonesia. Currently, working as a backend engineer at <a class="link link-primary" href="https://www.qontak.com" target="_blank" rel="norefferer">Qontak</a>.</p>
+						<a href="/about" class="btn btn-primary">More about me</a>
+					</div>
 				</div>
+			</div>
+		</div>
+		<div class="">
+			<h2 class="text-center text-3xl font-semibold">Latest Blog Posts</h2>
+			<div class="grid grid-cols-1 gap-4 mt-8">
+				<BlogCard />
+				<BlogCard />
+				<BlogCard />
+				<BlogCard />
+			</div>
+			<div class="text-center pt-16">
+				<a class="btn btn-primary" href="/blog">More posts</a>
 			</div>
 		</div>
 	</div>
