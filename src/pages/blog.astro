@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+import BlogCard from '../components/BlogCard.astro';
+
+const AllPosts = await Astro.glob('../pages/posts/*.md');
+const sortedAllPost = AllPosts.sort(function(a, b) { return Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate) })
+---
+
+<Layout title="Blog">
+	<div class="px-4">
+    <div class="mt-36">
+      <h1 class="text-5xl text-center font-bold">Blog</h1>
+      <div class="grid grid-cols-1 gap-4 mt-16">
+				<BlogCard />
+				<BlogCard />
+				<BlogCard />
+				<BlogCard />
+			</div>
+    </div>
+	</div>
+</Layout>

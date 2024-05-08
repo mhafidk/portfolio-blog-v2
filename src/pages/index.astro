@@ -1,8 +1,9 @@
 ---
-import { Image } from 'astro:assets';
-
 import Layout from '../layouts/Layout.astro';
 import BlogCard from '../components/BlogCard.astro';
+
+const AllPosts = await Astro.glob('../pages/posts/*.md');
+const Posts = AllPosts.sort(function(a, b) { return Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate) }).slice(0, 4)
 ---
 
 <Layout title="Muhammad Hafid Khoirul">
@@ -21,10 +22,7 @@ import BlogCard from '../components/BlogCard.astro';
 		<div class="">
 			<h2 class="text-center text-3xl font-semibold">Latest Blog Posts</h2>
 			<div class="grid grid-cols-1 gap-4 mt-8">
-				<BlogCard />
-				<BlogCard />
-				<BlogCard />
-				<BlogCard />
+				{ Posts.map((post) => <BlogCard post={post} />) }
 			</div>
 			<div class="text-center pt-16">
 				<a class="btn btn-primary" href="/blog">More posts</a>
