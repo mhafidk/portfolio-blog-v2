@@ -11,10 +11,7 @@ const sortedAllPost = AllPosts.sort(function(a, b) { return Date.parse(b.frontma
     <div class="mt-36">
       <h1 class="text-5xl text-center font-bold">Blog</h1>
       <div class="grid grid-cols-1 gap-4 mt-16">
-				<BlogCard />
-				<BlogCard />
-				<BlogCard />
-				<BlogCard />
+				{ sortedAllPost.map((post) => <BlogCard post={post} />) }
 			</div>
     </div>
 	</div>
