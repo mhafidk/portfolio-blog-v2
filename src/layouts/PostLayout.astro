@@ -6,7 +6,7 @@ const { frontmatter } = Astro.props;
 ---
 <Layout title={frontmatter.title}>
   <div class="px-4">
-    <img src={frontmatter.image['url']} alt={frontmatter.image['alt']} class="w-full h-[36rem] object-cover pt-4 rounded">
+    <img src={frontmatter.image['url']} alt={frontmatter.image['alt']} class="w-full h-96 md:h-[36rem] object-cover pt-4 rounded">
     <div class="max-w-screen-sm mx-auto">
       <h1 class="mt-12 text-center text-4xl font-semibold">{frontmatter.title}</h1>
     </div>
