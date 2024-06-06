@@ -14,7 +14,7 @@ const Posts = AllPosts.sort(function(a, b) { return Date.parse(b.frontmatter.pub
 					<div class="max-w-lg">
 						<h1 class="text-5xl font-bold">Muhammad Hafid K</h1>
 						<p class="py-6 max-w-md">Software engineer based in Bogor, Indonesia. Currently, working as a backend engineer at <a class="link link-primary" href="https://www.qontak.com" target="_blank" rel="norefferer">Qontak</a>.</p>
-						<a href="/about" class="btn btn-primary">More about me</a>
+						<a href="/about" class="btn">More about me</a>
 					</div>
 				</div>
 			</div>
@@ -25,7 +25,7 @@ const Posts = AllPosts.sort(function(a, b) { return Date.parse(b.frontmatter.pub
 				{ Posts.map((post) => <BlogCard post={post} />) }
 			</div>
 			<div class="text-center pt-16">
-				<a class="btn btn-primary" href="/blog">More posts</a>
+				<a class="btn" href="/blog">More posts</a>
 			</div>
 		</div>
 		<div class="max-w-screen-md mx-auto mt-48">
